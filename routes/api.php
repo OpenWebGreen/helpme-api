@@ -13,14 +13,6 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::group(['middleware' => ['Cors']], function () {
-    Route::get('/teste', function () {
-        $user = new \App\User();
-        $user->name = ' Cido COMEDOR DE PAO DE QUEIJO';
-        return $user->toJson();
-    });
-});
-
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });

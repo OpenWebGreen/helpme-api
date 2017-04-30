@@ -17,6 +17,7 @@ class CreateTableDesastres extends Migration
             $table->increments('id');
             $table->string('latitude')->nullable();
             $table->string('longitude')->nullable();
+            $table->string('landslide_size')->nullable();
             $table->timestamps();
         });
     }

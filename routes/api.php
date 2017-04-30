@@ -15,6 +15,7 @@ use Illuminate\Http\Request;
 
 Route::group(['middleware' => ['Cors']], function () {
     Route::get('get-area/{lat}/{long}', 'AreaController@getWarningArea');
+    Route::get('get-area/{id}', 'AreaController@getOne');
 });
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {

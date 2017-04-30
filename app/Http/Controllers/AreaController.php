@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Desastre;
 use Illuminate\Http\Request;
+use Psy\Exception\ErrorException;
 
 class AreaController extends Controller
 {
@@ -21,4 +22,10 @@ class AreaController extends Controller
             ->get();
         return json_encode($data);
     }
+
+    public function getOne($id)
+    {
+        return Desastre::find($id)->toJson();
+    }
+
 }

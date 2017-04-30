@@ -9,7 +9,8 @@ class Desastre extends Model
     protected $fillable = [
         'id',
         'latitude',
-        'longitude'
+        'longitude',
+        'landslide_size'
     ];
 
     protected $table = 'desastres';
